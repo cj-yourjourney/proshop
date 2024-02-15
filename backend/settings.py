@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-#r@!^v5+oc=t@jwk4(l^k_3(kxwdafat)3f_$otai9%%ipql+d
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost',
-                 'myproshop-89e25f3ef456.herokuapp.com']
+                 'myproshop-318018f63ef6.herokuapp.com']
 
 
 # Application definition
