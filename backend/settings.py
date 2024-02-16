@@ -203,8 +203,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL = 'images/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
@@ -222,15 +222,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    "https://sub.example.com",
-    "http://localhost:8080",
-    "http://127.0.0.1:9000",
-    'http://127.0.0.1:3000',
-    'http://localhost:3000',
-    'https://shoppro-488794eef662.herokuapp.com',
-]
+# CORS_ALLOWED_ORIGINS = []
 
 # CORS_ALLOW_ALL_ORIGINS=True
 
@@ -242,5 +234,7 @@ AWS_S3_SECRET_ACCESS_KEY = os.environ.get('AWS_S3_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'myproshop-bucket'
 
 
-# if os.getcwd() == '/app':
-#     DEBUG = False
+if os.getcwd() == '/app':
+    DEBUG = False
+
+
