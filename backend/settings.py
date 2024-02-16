@@ -141,17 +141,30 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+### Local 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'proshop',
+#         'USER': 'postgres',
+#         'PASSWORD': '0015',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
+
+# keep this
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'proshop',
-        'USER': 'postgres',
-        'PASSWORD': '0015',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# add this
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -199,6 +212,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CORS_ALLOW_ALL_ORIGINS = True
