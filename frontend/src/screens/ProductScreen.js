@@ -31,7 +31,6 @@ function ProductScreen({}) {
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
-  console.log('this is produce',product)
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
