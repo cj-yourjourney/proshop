@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-#r@!^v5+oc=t@jwk4(l^k_3(kxwdafat)3f_$otai9%%ipql+d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost',
-                 'myproshop-318018f63ef6.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'shoppro-488794eef662.herokuapp.com'
+                 ]
 
 
 # Application definition
@@ -120,6 +120,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+            # Point django to look for React Bulid folder
             os.path.join(BASE_DIR, 'frontend/build')
         ],
         'APP_DIRS': True,
@@ -141,29 +142,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-# keep this
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'proshop',
+        'USER': 'postgres',
+        'PASSWORD': '0015',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
-# Producation Database
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'proshop',
-#         'USER': 'postgres',
-#         'PASSWORD': '0015',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
 
 
 # Password validation
