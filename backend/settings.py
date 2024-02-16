@@ -141,7 +141,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-### Local 
+# Local
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -229,6 +229,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:9000",
     'http://127.0.0.1:3000',
     'http://localhost:3000',
+    'https://shoppro-488794eef662.herokuapp.com',
 ]
 
 # CORS_ALLOW_ALL_ORIGINS=True
