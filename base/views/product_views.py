@@ -57,7 +57,7 @@ def deleteProduct(request, pk):
 
 
 @api_view(['POST'])
-# @permission_classes([IsAdminUser])
+@permission_classes([IsAdminUser])
 def createProduct(request):
     user = request.user
 
