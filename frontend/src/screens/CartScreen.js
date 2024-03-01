@@ -26,7 +26,10 @@ function CartScreen() {
 
   const userInfo = localStorage.getItem('userInfo')
   // const username = useSelector(state => state.userLogin.userInfo.username)
-  console.log(userInfo)
+  // console.log(userInfo)
+  // console.log("productId", productId);
+  // console.log("productId", qty);
+
  
   useEffect(() => {
     if (productId) {
@@ -39,10 +42,10 @@ function CartScreen() {
   };
   const checkoutHandler = () => {
     if (userInfo) {
-      navigate("/shipping");
+      navigate("/shipping/");
   
     } else{
-      navigate('/login')
+      navigate('/login/')
     }
       
   }
@@ -63,7 +66,7 @@ function CartScreen() {
                     <Image src={item.image} alt={item.name} fluid rounded />
                   </Col>
                   <Col md={3}>
-                    <Link to={`/product/${item.product}`}>{item.name}</Link>
+                    <Link to={`/product/${item.product}/`}>{item.name}</Link>
                   </Col>
                   <Col md={2}>${item.price}</Col>
                   <Col md={4} lg={3}>
