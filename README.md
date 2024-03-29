@@ -21,7 +21,7 @@ Our Mock E-Commerce Website is a fictional online marketplace designed to showca
 
 ## Getting Started
 
-To explore our Mock E-Commerce Website and experience the features firsthand, visitvisit [Mock E-Commerce Website](https://shoppro-488794eef662.herokuapp.com/){:target="_blank"}.
+To explore our Mock E-Commerce Website and experience the features firsthand, visit Mock E-Commerce Website{:target="_blank"}.
 
 
 
